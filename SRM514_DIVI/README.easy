@@ -1,0 +1,60 @@
+Problem Statement
+    	
+Magical Girls are girls who have magical powers. They fight against evil witches to protect the Earth.
+
+
+
+You, one of the Magical Girls, are at point (0, 0) of the plane. You find another Magical Girl at (x, y) and she seems to be injured. So you decide to go to point (x, y) to help her.
+
+
+
+You can move only by n-knight jump. For a positive integer n, the n-knight jump is 8 types of moves. You can go from (0, 0) to (n, 1), (n, -1), (-n, 1), (-n, -1), (1, n), (-1, n), (1, -n) or (-1, -n) by using n-knight jump once.
+
+
+
+You are given a int[] jumpTypes containing the valid n-knight jumps you can perform. You can only use an n-knight jump if jumpTypes contains n. Return "YES" if you can reach (x, y) with the n-knight jumps of given numbers. Otherwise return "NO" (all quotes for clarity). You can use each n-knight jump as many times as you want.
+
+ 
+Definition
+    	
+Class:	MagicalGirlLevelOneDivOne
+Method:	isReachable
+Parameters:	int[], int, int
+Returns:	String
+Method signature:	String isReachable(int[] jumpTypes, int x, int y)
+(be sure your method is public)
+    
+ 
+Constraints
+-	jumpTypes will contain between 1 and 50 elements, inclusive.
+-	Each element of jumpTypes will be between 1 and 1,000,000,000, inclusive.
+-	All elements of jumpTypes will be distinct.
+-	x and y will each be between -1,000,000,000 and 1,000,000,000, inclusive.
+ 
+Examples
+0)	
+    	
+{2}
+5
+4
+Returns: "YES"
+(0, 0) -> (2, 1) -> (4, 2) -> (5, 4)
+1)	
+    	
+{3}
+5
+4
+Returns: "NO"
+2)	
+    	
+{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+1000000000
+-999999999
+Returns: "YES"
+3)	
+    	
+{999999999}
+999999999
+0
+Returns: "NO"
+
